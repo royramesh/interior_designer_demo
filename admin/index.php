@@ -1,3 +1,6 @@
+<?php
+require '../backend/check_login.php';
+?>
 <?php include('includes/header.php');  ?>
 
         <div class="container">

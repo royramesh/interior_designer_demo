@@ -1,9 +1,31 @@
+<?php
+session_start();
+require '../../backend/db_connect.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $conn->real_escape_string($_POST['email']);
+    $password = $conn->real_escape_string($_POST['password']);
+    $password_hash = md5($password);
+
+    $sql = "SELECT * FROM admin WHERE email='$email' AND password='$password'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $_SESSION['loggedin'] = true;
+        $_SESSION['email'] = $email;
+        header('Location: ../index.php'); // Redirect to a protected page
+        exit();
+    } else {
+        $error = "Invalid username or password.";
+    }
+}
+?>
 <!doctype html>
 <html lang="en">
 
 <!-- Mirrored from preview.colorlib.com/theme/bootstrap/login-form-19/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Sep 2024 09:28:33 GMT -->
 <head>
-<title>Login 09</title>
+<title>Login</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap" rel="stylesheet">
@@ -15,7 +37,6 @@
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-md-6 text-center mb-5">
-<h2 class="heading-section">Login #09</h2>
 </div>
 </div>
 <div class="row justify-content-center">
@@ -24,14 +45,14 @@
 <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/bg.jpg);"></div>
 <h3 class="text-center mb-0">Welcome</h3>
 <p class="text-center">Sign in by entering the information below</p>
-<form action="#" class="login-form">
+<form action="" class="login-form" method="post">
 <div class="form-group">
 <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-user"></span></div>
-<input type="text" class="form-control" placeholder="Username" required>
+<input type="text" class="form-control" placeholder="Username" name="email" required>
 </div>
 <div class="form-group">
 <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-lock"></span></div>
-<input type="password" class="form-control" placeholder="Password" required>
+<input type="password" class="form-control" placeholder="Password"  name="password" required>
 </div>
 <div class="form-group d-md-flex">
 <div class="w-100 text-md-right">
