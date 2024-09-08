@@ -8137,20 +8137,20 @@ body {
   font-size: 14px;
   line-height: 1.8;
   font-weight: normal;
-  background: #fbd1b7;
+  background: #BF2EF0;
   color: gray; }
 
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #b689b0; }
+  color: #ED3EF7; }
   a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;
     -webkit-box-shadow: none;
     box-shadow: none;
-    color: #b689b0; }
+    color: #ED3EF7; }
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
@@ -8160,7 +8160,7 @@ h1, h2, h3, h4, h5,
   color: #000; }
 
 .bg-primary {
-  background: #b689b0 !important; }
+  background: #ED3EF7 !important; }
 
 .ftco-section {
   padding: 7em 0; }
@@ -8227,7 +8227,7 @@ h1, h2, h3, h4, h5,
   box-shadow: none;
   border-radius: 0;
   border: none;
-  border-bottom: 1px solid #b689b0;
+  border-bottom: 1px solid #ED3EF7;
   padding-left: 30px;
   padding-right: 0;
   letter-spacing: 1px;
@@ -8256,7 +8256,7 @@ h1, h2, h3, h4, h5,
     -webkit-box-shadow: none;
     box-shadow: none;
     background: rgba(0, 0, 0, 0.07);
-    border-color: #b689b0; }
+    border-color: #ED3EF7; }
 
 .text a {
   text-transform: uppercase; }
@@ -8314,9 +8314,9 @@ h1, h2, h3, h4, h5,
 
 /* Style the checkmark/indicator */
 .checkbox-primary {
-  color: #b689b0; }
+  color: #ED3EF7; }
   .checkbox-primary input:checked ~ .checkmark:after {
-    color: #b689b0; }
+    color: #ED3EF7; }
 
 .btn {
   cursor: pointer;
@@ -8327,18 +8327,18 @@ h1, h2, h3, h4, h5,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #b689b0 !important;
-    border: 1px solid #b689b0 !important;
+    background: #ED3EF7 !important;
+    border: 1px solid #ED3EF7 !important;
     color: #fff !important; }
     .btn.btn-primary:hover {
-      border: 1px solid #b689b0;
+      border: 1px solid #ED3EF7;
       background: transparent;
-      color: #b689b0; }
+      color: #ED3EF7; }
     .btn.btn-primary.btn-outline-primary {
-      border: 1px solid #b689b0;
+      border: 1px solid #ED3EF7;
       background: transparent;
-      color: #b689b0; }
+      color: #ED3EF7; }
       .btn.btn-primary.btn-outline-primary:hover {
         border: 1px solid transparent;
-        background: #b689b0;
+        background: #ED3EF7;
         color: #fff; }
