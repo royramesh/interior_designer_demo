@@ -62,7 +62,7 @@
                             </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <a href="about.html" class="btn btn3">Discover More About Ous</a>
+                        <a href="about" class="btn btn3">Discover More About Ous</a>
                     </div>
                 </div>
             </div>
@@ -230,9 +230,9 @@
                                     <li>By Admin   -   30 Likes   -   4 Comments</li>
                                 </ul>
                                 <div class="blog-cap">
-                                    <h3><a href="blog_details.html">16 Easy Ideas to Use Everyday
+                                    <h3><a href="blog_details">16 Easy Ideas to Use Everyday
                                         Stuff in Kitchen.</a></h3>
-                                    <a href="blog_details.html" class="more-btn">Read more</a>
+                                    <a href="blog_details" class="more-btn">Read more</a>
                                 </div>
                             </div>
                         </div>
@@ -248,9 +248,9 @@
                                     <li>By Admin   -   30 Likes   -   4 Comments</li>
                                 </ul>
                                 <div class="blog-cap">
-                                    <h3><a href="blog_details.html">16 Easy Ideas to Use Everyday
+                                    <h3><a href="blog_details">16 Easy Ideas to Use Everyday
                                         Stuff in Kitchen.</a></h3>
-                                    <a href="blog_details.html" class="more-btn">Read more</a>
+                                    <a href="blog_details" class="more-btn">Read more</a>
                                 </div>
                             </div>
                         </div>

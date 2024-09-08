@@ -25,7 +25,7 @@
                             <div class="thumb-content-box">
                                 <div class="thumb-content">
                                     <h3><span>Intorior</span>Burj Khalifa</h3>
-                                    <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                    <a href="work"><i class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                             <div class="thumb-content-box">
                                 <div class="thumb-content">
                                     <h3><span>Intorior</span>Burj Khalifa</h3>
-                                    <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                    <a href="work"><i class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                             <div class="thumb-content-box">
                                 <div class="thumb-content">
                                     <h3><span>Intorior</span>Burj Khalifa</h3>
-                                    <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                    <a href="work"><i class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                             <div class="thumb-content-box">
                                 <div class="thumb-content">
                                     <h3><span>Intorior</span>Burj Khalifa</h3>
-                                    <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                    <a href="work"><i class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                             <div class="thumb-content-box">
                                 <div class="thumb-content">
                                     <h3><span>Intorior</span>Burj Khalifa</h3>
-                                    <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                    <a href="work"><i class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                             <div class="thumb-content-box">
                                 <div class="thumb-content">
                                     <h3><span>Intorior</span>Burj Khalifa</h3>
-                                    <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                    <a href="work"><i class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>
                         </div>

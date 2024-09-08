@@ -83,7 +83,7 @@
                         </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <a href="about.html" class="btn btn3">Discover More About Ous</a>
+                    <a href="about" class="btn btn3">Discover More About Ous</a>
                 </div>
             </div>
         </div>
@@ -109,7 +109,7 @@
                             <img src="assets/img/gallery/services1.png" alt="">
                             </div>
                             <div class="services-caption">
-                            <h3><a href="services.html">Lighting</a></h3>
+                            <h3><a href="services">Lighting</a></h3>
                             <p class="pera1">For each project we establish </p>
                             <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
                         </div>
@@ -121,7 +121,7 @@
                             <img src="assets/img/gallery/services2.png" alt="">
                             </div>
                             <div class="services-caption">
-                            <h3><a href="services.html">Interior Design</a></h3>
+                            <h3><a href="services">Interior Design</a></h3>
                             <p class="pera1">For each project we establish </p>
                             <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
                         </div>
@@ -133,7 +133,7 @@
                             <img src="assets/img/gallery/services3.png" alt="">
                             </div>
                             <div class="services-caption">
-                            <h3><a href="services.html">Office Decoretion</a></h3>
+                            <h3><a href="services">Office Decoretion</a></h3>
                             <p class="pera1">For each project we establish </p>
                             <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
                         </div>
@@ -153,7 +153,7 @@
                         <div class="thumb-content-box">
                             <div class="thumb-content">
                                 <h3><span>Intorior</span>Burj Khalifa</h3>
-                                <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                <a href="work"><i class="fas fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -164,7 +164,7 @@
                         <div class="thumb-content-box">
                             <div class="thumb-content">
                                 <h3><span>Intorior</span>Burj Khalifa</h3>
-                                <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                <a href="work"><i class="fas fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                         <div class="thumb-content-box">
                             <div class="thumb-content">
                                 <h3><span>Intorior</span>Burj Khalifa</h3>
-                                <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                <a href="work"><i class="fas fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -186,7 +186,7 @@
                         <div class="thumb-content-box">
                             <div class="thumb-content">
                                 <h3><span>Intorior</span>Burj Khalifa</h3>
-                                <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                <a href="work"><i class="fas fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -197,7 +197,7 @@
                         <div class="thumb-content-box">
                             <div class="thumb-content">
                                 <h3><span>Intorior</span>Burj Khalifa</h3>
-                                <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                <a href="work"><i class="fas fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -208,7 +208,7 @@
                         <div class="thumb-content-box">
                             <div class="thumb-content">
                                 <h3><span>Intorior</span>Burj Khalifa</h3>
-                                <a href="work.html"><i class="fas fa-angle-right"></i></a>
+                                <a href="work"><i class="fas fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -379,9 +379,9 @@
                                 <li>By Admin   -   30 Likes   -   4 Comments</li>
                             </ul>
                             <div class="blog-cap">
-                                <h3><a href="blog_details.html">16 Easy Ideas to Use Everyday
+                                <h3><a href="blog_details">16 Easy Ideas to Use Everyday
                                     Stuff in Kitchen.</a></h3>
-                                <a href="blog_details.html" class="more-btn">Read more</a>
+                                <a href="blog_details" class="more-btn">Read more</a>
                             </div>
                         </div>
                     </div>
@@ -397,9 +397,9 @@
                                 <li>By Admin   -   30 Likes   -   4 Comments</li>
                             </ul>
                             <div class="blog-cap">
-                                <h3><a href="blog_details.html">16 Easy Ideas to Use Everyday
+                                <h3><a href="blog_details">16 Easy Ideas to Use Everyday
                                     Stuff in Kitchen.</a></h3>
-                                <a href="blog_details.html" class="more-btn">Read more</a>
+                                <a href="blog_details" class="more-btn">Read more</a>
                             </div>
                         </div>
                     </div>

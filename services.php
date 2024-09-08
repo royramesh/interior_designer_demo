@@ -66,7 +66,7 @@
                                 <img src="assets/img/gallery/services1.png" alt="">
                              </div>
                              <div class="services-caption">
-                                <h3><a href="services.html">Lighting</a></h3>
+                                <h3><a href="services">Lighting</a></h3>
                                 <p class="pera1">For each project we establish </p>
                                 <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
                             </div>
@@ -78,7 +78,7 @@
                                 <img src="assets/img/gallery/services2.png" alt="">
                              </div>
                              <div class="services-caption">
-                                <h3><a href="services.html">Interior Design</a></h3>
+                                <h3><a href="services">Interior Design</a></h3>
                                 <p class="pera1">For each project we establish </p>
                                 <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
                             </div>
@@ -90,7 +90,7 @@
                                 <img src="assets/img/gallery/services3.png" alt="">
                              </div>
                              <div class="services-caption">
-                                <h3><a href="services.html">Office Decoretion</a></h3>
+                                <h3><a href="services">Office Decoretion</a></h3>
                                 <p class="pera1">For each project we establish </p>
                                 <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
                             </div>
@@ -102,7 +102,7 @@
                                 <img src="assets/img/gallery/services4.png" alt="">
                              </div>
                              <div class="services-caption">
-                               <h3><a href="services.html">Lighting</a></h3>
+                               <h3><a href="services">Lighting</a></h3>
                                 <p class="pera1">For each project we establish </p>
                                 <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
                             </div>
@@ -114,7 +114,7 @@
                                 <img src="assets/img/gallery/services5.png" alt="">
                              </div>
                              <div class="services-caption">
-                                 <h3><a href="services.html">Interior Design</a></h3>
+                                 <h3><a href="services">Interior Design</a></h3>
                                 <p class="pera1">For each project we establish </p>
                                 <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
                             </div>
@@ -126,7 +126,7 @@
                                 <img src="assets/img/gallery/services6.png" alt="">
                              </div>
                              <div class="services-caption">
-                                <h3><a href="services.html">Office Decoretion</a></h3>
+                                <h3><a href="services">Office Decoretion</a></h3>
                                 <p class="pera1">For each project we establish </p>
                                 <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
                             </div>
