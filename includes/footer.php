@@ -16,7 +16,7 @@
                                 </div>
                             </div>
                             <div class="footer-number">
-                                <h4><span>+564 </span>7885 3222</h4>
+                                <h4><span>+91 </span>9749649373</h4>
                                 <p>youremail@gmail.com</p>
                             </div>
                         </div>
@@ -27,12 +27,12 @@
                                 <h4>Useful Links</h4>
                             </div>
                             <div class="footer-cap">
-                                <span>New York</span>
-                                <p>123 East 26th Street, Fifth Floor, New York, NY 10011</p>
+                                <span>India</span>
+                                <p>123 East 26th Street, Fifth Floor, India, IN 10011</p>
                             </div>
                             <div class="footer-cap">
-                                <span>Japan</span>
-                                <p>123 East 26th Street, Fifth Floor, New York, NY 10011</p>
+                                <span>India</span>
+                                <p>123 East 26th Street, Fifth Floor, India, IN 10011</p>
                             </div>
                         </div>
                     </div>
