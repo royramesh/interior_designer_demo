@@ -1,4 +1,5 @@
-<?php include('includes/header.php');  ?>
+<?php include('includes/header.php'); ?>
+<?php require 'backend/db_connect.php'; ?>
     <main>
         <!--? Hero Start -->
         <div class="slider-area2">
@@ -81,40 +82,23 @@
                     </div>
                 </div>
                 <div class="row">
-                    <!-- single Tem -->
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team2.png" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <h3><a href="#">Jhon Sunsa</a></h3>
-                                <span>Creative derector</span>
-                            </div>
+                <?php 
+            $sql2 = "SELECT * FROM 	team_members";
+            $result2 = $conn->query($sql2);
+            while($row2 = $result2->fetch_assoc()) { ?>
+                <!-- single Tem -->
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="<?php echo 'admin/' . htmlspecialchars($row2['photo_path'], ENT_QUOTES, 'UTF-8'); ?>" alt="">
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="#"><?php echo htmlspecialchars($row2['name'], ENT_QUOTES, 'UTF-8'); ?></a></h3>
+                            <span><?php echo htmlspecialchars($row2['position'], ENT_QUOTES, 'UTF-8'); ?></span>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team3.png" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <h3><a href="#">Jhon Sunsa</a></h3>
-                                <span>Creative derector</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team1.png" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <h3><a href="#">Jhon Sunsa</a></h3>
-                                <span>Creative derector</span>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            <?php } ?>
                 </div>
             </div>
         </div>

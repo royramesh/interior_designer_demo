@@ -1,40 +1,40 @@
-<?php include('includes/header.php');  ?>
+<?php include('includes/header.php'); ?>
+<?php require 'backend/db_connect.php'; ?>
+<?php
+$sql = "SELECT * FROM slider";
+$result = $conn->query($sql);
+
+// Close the database connection
+?>
 <main>
     <!--? slider Area Start-->
+    <!-- slider Area Start-->
+    <!-- slider Area Start-->
     <div class="slider-area">
         <div class="slider-active dot-style">
-            <!-- Single Slider -->
-            <div class="single-slider slider-height hero-overly d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay=".4s">Welcome to Intorior</span>
-                                <h1 data-animation="fadeInLeft" data-delay=".6s">Modern Interior & Design</h1>
+            <?php while($row = $result->fetch_assoc()) { ?>
+                <div class="single-slider slider-height hero-overly d-flex align-items-center" style="background-image: url('<?php echo 'admin/' . htmlspecialchars($row['image_path'], ENT_QUOTES, 'UTF-8'); ?>');">
+                    <div class="containe">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".4s">Welcome to Intorior</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".6s"><?php echo htmlspecialchars($row['text']); ?></h1>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Single Slider -->
-            <div class="single-slider slider-height hero-overly d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay=".4s">Welcome to Intorior</span>
-                                <h1 data-animation="fadeInLeft" data-delay=".6s">Modern Interior & Design</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
         <!-- Video icon -->
         <div class="video-icon">
             <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><i class="fas fa-play"></i></a>
         </div>
     </div>
+    <!-- slider Area End-->
+<!-- slider Area End-->
+
     <!-- slider Area End-->
     <!--? our info Start -->
     <div class="our-info-area pt-170 pb-100 section-bg" data-background="assets/img/gallery/section_bg02.jpg">
@@ -83,7 +83,7 @@
                         </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <a href="about" class="btn btn3">Discover More About Ous</a>
+                    <a href="about" class="btn btn3">Discover More About Us</a>
                 </div>
             </div>
         </div>
@@ -103,19 +103,24 @@
                 </div>
             </div>
             <div class="row">
+            <?php 
+            $sql3 = "SELECT * FROM 	services";
+            $result3 = $conn->query($sql3);
+            while($row3 = $result3->fetch_assoc()) { ?>
                 <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="single-services mb-200">
                         <div class="services-img">
-                            <img src="assets/img/gallery/services1.png" alt="">
+                            <img src="<?php echo 'admin/' . htmlspecialchars($row3['image_path'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($row3['name'], ENT_QUOTES, 'UTF-8'); ?>">
                             </div>
                             <div class="services-caption">
-                            <h3><a href="services">Lighting</a></h3>
-                            <p class="pera1">For each project we establish </p>
-                            <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
+                            <h3><a href="services"><?php echo htmlspecialchars($row3['name'], ENT_QUOTES, 'UTF-8'); ?></a></h3>
+                            <p class="pera1"><?php echo htmlspecialchars($row3['para1'], ENT_QUOTES, 'UTF-8'); ?> </p>
+                            <p class="pera2"><?php echo htmlspecialchars($row3['para2'], ENT_QUOTES, 'UTF-8'); ?></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-10">
+                <?php } ?>
+                <!-- <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="single-services mb-200">
                         <div class="services-img">
                             <img src="assets/img/gallery/services2.png" alt="">
@@ -138,7 +143,7 @@
                             <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -230,19 +235,24 @@
                 </div>
             </div>
             <div class="row">
+            <?php 
+            $sql2 = "SELECT * FROM 	team_members";
+            $result2 = $conn->query($sql2);
+            while($row2 = $result2->fetch_assoc()) { ?>
                 <!-- single Tem -->
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                     <div class="single-team mb-30">
                         <div class="team-img">
-                            <img src="assets/img/gallery/team2.png" alt="">
+                            <img src="<?php echo 'admin/' . htmlspecialchars($row2['photo_path'], ENT_QUOTES, 'UTF-8'); ?>" alt="">
                         </div>
                         <div class="team-caption">
-                            <h3><a href="#">Jhon Sunsa</a></h3>
-                            <span>Creative derector</span>
+                            <h3><a href="#"><?php echo htmlspecialchars($row2['name'], ENT_QUOTES, 'UTF-8'); ?></a></h3>
+                            <span><?php echo htmlspecialchars($row2['position'], ENT_QUOTES, 'UTF-8'); ?></span>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+            <?php } ?>
+                <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                     <div class="single-team mb-30">
                         <div class="team-img">
                             <img src="assets/img/gallery/team3.png" alt="">
@@ -263,7 +273,7 @@
                             <span>Creative derector</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

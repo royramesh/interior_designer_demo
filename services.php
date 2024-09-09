@@ -1,4 +1,5 @@
-<?php include('includes/header.php');  ?>
+<?php include('includes/header.php'); ?>
+<?php require 'backend/db_connect.php'; ?>
     <main>
         <!--? Hero Start -->
         <div class="slider-area2">
@@ -60,78 +61,23 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="single-services mb-200">
-                            <div class="services-img">
-                                <img src="assets/img/gallery/services1.png" alt="">
-                             </div>
-                             <div class="services-caption">
-                                <h3><a href="services">Lighting</a></h3>
-                                <p class="pera1">For each project we establish </p>
-                                <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
+                <?php 
+            $sql3 = "SELECT * FROM 	services";
+            $result3 = $conn->query($sql3);
+            while($row3 = $result3->fetch_assoc()) { ?>
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-services mb-200">
+                        <div class="services-img">
+                            <img src="<?php echo 'admin/' . htmlspecialchars($row3['image_path'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($row3['name'], ENT_QUOTES, 'UTF-8'); ?>">
                             </div>
+                            <div class="services-caption">
+                            <h3><a href="services"><?php echo htmlspecialchars($row3['name'], ENT_QUOTES, 'UTF-8'); ?></a></h3>
+                            <p class="pera1"><?php echo htmlspecialchars($row3['para1'], ENT_QUOTES, 'UTF-8'); ?> </p>
+                            <p class="pera2"><?php echo htmlspecialchars($row3['para2'], ENT_QUOTES, 'UTF-8'); ?></p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="single-services mb-200">
-                            <div class="services-img">
-                                <img src="assets/img/gallery/services2.png" alt="">
-                             </div>
-                             <div class="services-caption">
-                                <h3><a href="services">Interior Design</a></h3>
-                                <p class="pera1">For each project we establish </p>
-                                <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="single-services mb-200">
-                            <div class="services-img">
-                                <img src="assets/img/gallery/services3.png" alt="">
-                             </div>
-                             <div class="services-caption">
-                                <h3><a href="services">Office Decoretion</a></h3>
-                                <p class="pera1">For each project we establish </p>
-                                <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="single-services mb-200">
-                            <div class="services-img">
-                                <img src="assets/img/gallery/services4.png" alt="">
-                             </div>
-                             <div class="services-caption">
-                               <h3><a href="services">Lighting</a></h3>
-                                <p class="pera1">For each project we establish </p>
-                                <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="single-services mb-200">
-                            <div class="services-img">
-                                <img src="assets/img/gallery/services5.png" alt="">
-                             </div>
-                             <div class="services-caption">
-                                 <h3><a href="services">Interior Design</a></h3>
-                                <p class="pera1">For each project we establish </p>
-                                <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="single-services mb-200">
-                            <div class="services-img">
-                                <img src="assets/img/gallery/services6.png" alt="">
-                             </div>
-                             <div class="services-caption">
-                                <h3><a href="services">Office Decoretion</a></h3>
-                                <p class="pera1">For each project we establish </p>
-                                <p class="pera2">For each project we establish relationships with partners who we know will help us. </p>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <?php } ?>
                 </div>
             </div>
         </div>

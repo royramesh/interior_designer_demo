@@ -3472,12 +3472,31 @@ hero-btn {
 }
 
 /* line 43, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
-.slider-area {
+/* .slider-area {
   position: relative;
   background-image: url(../img/hero/h1_hero.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+} */
+.slider-area {
+  position: relative;
+}
+
+.single-slider {
+  height: 100vh; /* or adjust based on your design */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Add other styles as needed */
+
+
+/* Additional styles for .single-slider, if needed */
+.single-slider {
+  /* Ensure it covers the full slider height */
+  height: 100vh; /* or any other height */
 }
 
 /* line 50, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
