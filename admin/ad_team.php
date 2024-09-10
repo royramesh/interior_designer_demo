@@ -1,7 +1,4 @@
-<?php
-require '../backend/db_connect.php'; 
-require '../backend/check_login.php';
-?>
+
 <?php include('includes/header.php');  ?>
 <?php
 // Fetch team member data from the database

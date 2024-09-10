@@ -1,6 +1,5 @@
 <?php
-require '../backend/db_connect.php'; // Adjust the path as needed
-require '../backend/check_login.php'; // Ensure the user is logged in
+include('includes/header.php'); 
 
 // Check if the service ID is provided
 if (!isset($_GET['id'])) {
@@ -67,8 +66,6 @@ $stmt->close();
 // Close the database connection
 $conn->close();
 ?>
-
-<?php include('includes/header.php'); ?>
 <div class="container">
   <div class="page-inner">
     <div class="page-header">

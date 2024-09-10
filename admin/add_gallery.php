@@ -3,15 +3,15 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Validate and process form inputs
-    $sliderText = $_POST['sliderText'];
-    $imageAltText = $_POST['imageAltText'];
-    
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+
     // File upload processing
-    if (isset($_FILES['sliderImage']) && $_FILES['sliderImage']['error'] == UPLOAD_ERR_OK) {
-        $fileTmpPath = $_FILES['sliderImage']['tmp_name'];
-        $fileName = $_FILES['sliderImage']['name'];
-        $fileSize = $_FILES['sliderImage']['size'];
-        $fileType = $_FILES['sliderImage']['type'];
+    if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
+        $fileTmpPath = $_FILES['image']['tmp_name'];
+        $fileName = $_FILES['image']['name'];
+        $fileSize = $_FILES['image']['size'];
+        $fileType = $_FILES['image']['type'];
         $fileNameCmps = explode(".", $fileName);
         $fileExtension = strtolower(end($fileNameCmps));
         
@@ -19,18 +19,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
         
         // Directory where the file will be stored
-        $uploadFileDir = 'uploads/slider/';
+        $uploadFileDir = 'uploads/gallery/';
         $dest_path = $uploadFileDir . $newFileName;
         
         // Move the file from temporary directory to the target directory
         if (move_uploaded_file($fileTmpPath, $dest_path)) {
             // Prepare SQL query to insert form data into the database
-            $sql = "INSERT INTO slider (text, image_path, alt_text) VALUES (?, ?, ?)";
+            $sql = "INSERT INTO gallery (title, image_path, description) VALUES (?, ?, ?)";
             if ($stmt = $conn->prepare($sql)) {
-                $stmt->bind_param('sss', $sliderText, $dest_path, $imageAltText);
+                $stmt->bind_param('sss', $title, $dest_path, $description);
                 
                 if ($stmt->execute()) {
-                    echo "The file was uploaded and data was saved successfully.";
+                    echo "The image was added to the gallery successfully.";
+                    header("Location: ad_gallery.php"); // Redirect to gallery overview page
+                    exit();
                 } else {
                     echo "Database error: " . $stmt->error;
                 }
@@ -51,11 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // Close the database connection
 $conn->close();
 ?>
-
 <div class="container">
   <div class="page-inner">
     <div class="page-header">
-      <h3 class="fw-bold mb-3">Forms</h3>
+      <h3 class="fw-bold mb-3">Add Gallery Item</h3>
       <ul class="breadcrumbs mb-3">
         <li class="nav-home">
           <a href="#">
@@ -72,7 +73,7 @@ $conn->close();
           <i class="icon-arrow-right"></i>
         </li>
         <li class="nav-item">
-          <a href="#">Slider Upload Form</a>
+          <a href="#">Add Gallery Item</a>
         </li>
       </ul>
     </div>
@@ -80,47 +81,47 @@ $conn->close();
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <div class="card-title">Upload Slider Text and Image</div>
+            <div class="card-title">Upload Gallery Item Details</div>
           </div>
           <div class="card-body">
             <form action="" method="post" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-md-6 col-lg-4">
                   <div class="form-group">
-                    <label for="sliderText">Slider Text</label>
+                    <label for="title">Image Title</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="sliderText"
-                      name="sliderText"
-                      placeholder="Enter Slider Text"
+                      id="title"
+                      name="title"
+                      placeholder="Enter Image Title"
                       required
                     />
                   </div>
                   <div class="form-group">
-                    <label for="sliderImage">Slider Image</label>
+                    <label for="image">Gallery Image</label>
                     <input
                       type="file"
                       class="form-control"
-                      id="sliderImage"
-                      name="sliderImage"
+                      id="image"
+                      name="image"
                       accept="image/*"
                       required
                     />
                     <small class="form-text text-muted">
-                      Upload an image file for the slider.
+                      Upload an image for the gallery.
                     </small>
                   </div>
                   <div class="form-group">
-                    <label for="imageAltText">Image Alt Text</label>
-                    <input
-                      type="text"
+                    <label for="description">Image Description</label>
+                    <textarea
                       class="form-control"
-                      id="imageAltText"
-                      name="imageAltText"
-                      placeholder="Enter Image Alt Text"
+                      id="description"
+                      name="description"
+                      rows="4"
+                      placeholder="Enter Image Description"
                       required
-                    />
+                    ></textarea>
                   </div>
                 </div>
               </div>
